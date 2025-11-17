@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Avg Run Club — Run Together, Grow Stronger</title>
+  <meta name="description" content="Avg Run Club — community runs, training plans, events and social meetups for runners of all levels.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --accent1:linear-gradient(135deg,#ff7a18 0%,#af002d 100%);
+      --accent2:linear-gradient(135deg,#00c6ff 0%,#0072ff 100%);
+      --glass: rgba(255,255,255,0.04);
+      --muted: rgba(255,255,255,0.65);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#071126 0%, #071226 50%, #07112a 100%);
+      color:#fff;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:var(--accent1);font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    .btn{background:var(--accent2);padding:10px 16px;border-radius:10px;color:#02112a;font-weight:700;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:18px;padding:28px;box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+    .headline{font-size:clamp(30px,5vw,42px);margin:0 0 10px 0;line-height:1.03}
+    .kicker{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.04);border-radius:999px;font-weight:600;margin-bottom:14px}
+    .lead{color:var(--muted);margin-bottom:18px}
+    .cta-row{display:flex;gap:12px}
+
+    /* stats */
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:var(--glass);padding:12px;border-radius:12px;text-align:center;flex:1}
+    .stat strong{display:block;font-size:18px}
+
+    /* right column image */
+    .hero-image{border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(2,6,23,0.6)}
+    .hero-image img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* sections */
+    section{margin:40px 0}
+    .grid{display:grid;gap:18px}
+    .features{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    .feature h4{margin:8px 0}
+    .muted{color:var(--muted)}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .gallery img{width:100%;height:150px;object-fit:cover;border-radius:10px}
+
+    /* events */
+    .event{display:flex;gap:16px;align-items:center;background:var(--card);padding:14px;border-radius:12px}
+    .event img{width:88px;height:72px;object-fit:cover;border-radius:10px}
+    .event .meta{flex:1}
+
+    /* footer */
+    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:520px){
+      .gallery img{height:110px}
+      nav{display:none}
+    }
+
+    /* tiny form */
+    .form-row{display:flex;gap:8px}
+    .form-row input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.03);display:inline-block}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">AR</div>
+        <div>
+          <div style="font-weight:700">Avg Run Club</div>
+          <div style="font-size:12px;color:var(--muted)">Community · Training · Events</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#join" class="btn">Join a run</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="hero-card">
+          <span class="kicker">Local running community</span>
+          <h1 class="headline">Run better. Run together.</h1>
+          <p class="lead">Avg Run Club brings runners of all levels together — weekly social runs, coached sessions, and monthly events to keep you consistent and motivated.</p>
+
+          <div class="cta-row">
+            <a class="btn" href="#join">Join a free run</a>
+            <a href="#events" style="padding:10px 16px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);text-decoration:none;color:var(--muted);font-weight:700">See events</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat"><small class="muted">Members</small><strong>1.2k+</strong></div>
+            <div class="stat"><small class="muted">Weekly runs</small><strong>5</strong></div>
+            <div class="stat"><small class="muted">Avg pace</small><strong>6'10" /km</strong></div>
+          </div>
+
+          <div style="margin-top:18px">
+            <form onsubmit="event.preventDefault();alert('Thanks — we will reach out with run details!')">
+              <div class="form-row">
+                <input aria-label="Your name" placeholder="Name" required>
+                <input aria-label="Phone or email" placeholder="Phone or email" required>
+                <button class="btn" type="submit">Join</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <!-- Aesthetic run photo from Unsplash (dynamic query) -->
+          <img src="https://source.unsplash.com/collection/483251/800x600?sig=1&running" alt="runners on a sunrise route">
+        </div>
+      </div>
+
+      <section id="about">
+        <div class="hero-card">
+          <h2>About Avg Run Club</h2>
+          <p class="muted">Started by a few friends who wanted consistency, Avg Run Club is now a welcoming community that focuses on safe, structured training and social connection. We welcome walkers, joggers, and competitive athletes — find a group that fits your pace.</p>
+
+          <div class="grid features" style="margin-top:18px">
+            <div class="feature">
+              <h4>Weekly Social Runs</h4>
+              <p class="muted">Casual 5–10 km group runs at different neighborhood meeting points.</p>
+              <div class="pill" style="margin-top:10px">All paces welcome</div>
+            </div>
+            <div class="feature">
+              <h4>Coach-led Sessions</h4>
+              <p class="muted">Structured interval and tempo sessions to build speed and endurance.</p>
+              <div class="pill" style="margin-top:10px">Beginner-friendly</div>
+            </div>
+            <div class="feature">
+              <h4>Monthly Events</h4>
+              <p class="muted">Community races, coffee runs, and charity miles — fun-focused.</p>
+              <div class="pill" style="margin-top:10px">Family friendly</div>
+            </div>
+            <div class="feature">
+              <h4>Tracking & Goals</h4>
+              <p class="muted">Guidance on training plans, goal setting, and progress tracking.</p>
+              <div class="pill" style="margin-top:10px">Personal plans</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="events">
+        <h2>Upcoming events</h2>
+        <div class="grid" style="margin-top:12px">
+          <div class="event">
+            <img src="https://source.unsplash.com/featured/?marathon" alt="marathon start">
+            <div class="meta">
+              <strong>Sunrise Park 10K</strong>
+              <div class="muted">Sat, Dec 6 • 6:00 AM • Parkside Loop</div>
+              <div class="muted" style="margin-top:6px">A relaxed 10K with pacing groups and post-run coffee.</div>
+            </div>
+          </div>
+
+          <div class="event">
+            <img src="https://source.unsplash.com/featured/?intervals,running" alt="interval training">
+            <div class="meta">
+              <strong>Speed Session — Track Night</strong>
+              <div class="muted">Wed, Nov 26 • 7:00 PM • City Track</div>
+              <div class="muted" style="margin-top:6px">Intervals + drills — ideal for improving cadence and turnover.</div>
+            </div>
+          </div>
+
+          <div class="event">
+            <img src="https://source.unsplash.com/featured/?group,run" alt="group run">
+            <div class="meta">
+              <strong>Social Coffee Run</strong>
+              <div class="muted">Sun, Nov 30 • 7:30 AM • Riverside Walkway</div>
+              <div class="muted" style="margin-top:6px">5K gentle pace, all welcome. Kids and pets allowed.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <h2>Gallery — recent runs</h2>
+        <div class="gallery" style="margin-top:12px">
+          <img src="https://source.unsplash.com/featured/?runner,trail&sig=2" alt="trail running">
+          <img src="https://source.unsplash.com/featured/?running,city&sig=3" alt="city run at dusk">
+          <img src="https://source.unsplash.com/featured/?group,runners&sig=4" alt="group run smiling">
+          <img src="https://source.unsplash.com/featured/?morning,run&sig=5" alt="morning joggers">
+        </div>
+      </section>
+
+      <section id="join">
+        <div class="hero-card">
+          <h2>Join a run — it's free</h2>
+          <p class="muted">Pick a meeting point and we’ll add you to the WhatsApp group for live updates. Fill your details and we'll welcome you on the next run.</p>
+          <form onsubmit="event.preventDefault();document.getElementById('joined').style.display='block'">
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+              <input placeholder="Full name" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;flex:1;min-width:180px">
+              <input placeholder="Phone or email" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit;flex:1;min-width:180px">
+              <select style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit">
+                <option>Choose meeting point</option>
+                <option>Riverside • 7:30 AM</option>
+                <option>City Park • 6:00 AM</option>
+                <option>Track • 7:00 PM</option>
+              </select>
+              <button class="btn" type="submit">Sign me up</button>
+            </div>
+          </form>
+          <div id="joined" style="display:none;margin-top:12px;padding:10px;background:rgba(0,0,0,0.25);border-radius:10px">Thanks — check your messages for details and meetup links.</div>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>FAQs</h2>
+        <div style="margin-top:12px" class="grid">
+          <div class="feature">
+            <h4>Do I need to be fast?</h4>
+            <p class="muted">No — we run in pace groups. Everyone is welcome from walkers to marathoners.</p>
+          </div>
+          <div class="feature">
+            <h4>What should I bring?</h4>
+            <p class="muted">Comfortable shoes, water, and a light jacket if it's chilly. We recommend a small ID and phone.</p>
+          </div>
+          <div class="feature">
+            <h4>Are dogs allowed?</h4>
+            <p class="muted">On casual social runs yes — please keep them on a short leash and be mindful of others.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <strong>Avg Run Club</strong>
+          <div class="muted" style="font-size:13px">Building healthier, happier runners — one run at a time.</div>
+        </div>
+        <div class="muted">© Avg Run Club • Built with ❤️</div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
