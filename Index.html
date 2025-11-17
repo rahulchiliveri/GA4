@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PeakFit Gym — Strength • Cardio • Community</title>
+  <meta name="description" content="PeakFit Gym — modern fitness studio offering strength training, group classes, personal training and nutrition coaching." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#ff6b6b;
+      --accent-2:#4f46e5;
+      --muted:#6b7280;
+      --bg: #0f172a;
+      --card-bg: rgba(255,255,255,0.03);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background: linear-gradient(180deg,#071027 0%, #081226 50%, #02111a 100%); color:#e6eef8}
+    a{color:inherit}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:800;color:white}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{font-weight:600;color: #e6eef8;text-decoration:none}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));padding:10px 14px;border-radius:10px;color:white;font-weight:700;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:48px 0}
+    .hero-left h1{font-size:clamp(32px,6vw,48px);margin:0 0 12px;line-height:1.02}
+    .sub{color:var(--muted);margin-bottom:20px}
+    .hero-cta{display:flex;gap:12px;align-items:center}
+    .btn{padding:12px 16px;border-radius:10px;font-weight:700;text-decoration:none}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:#e6eef8;background:transparent}
+    .features-row{display:flex;gap:12px;margin-top:22px}
+    .pill{background:var(--card-bg);padding:10px;border-radius:12px;font-weight:600}
+
+    /* Card list */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:14px}
+    .stats{display:flex;gap:12px}
+    .stat{flex:1;text-align:center}
+    .stat h3{margin:6px 0 0}
+
+    /* Right hero image */
+    .hero-right{background-image: url('https://images.unsplash.com/photo-1571019613914-85f342c46f1d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6c6b9b2d6fbe3a9a7b0f7516a6b9f8d9');background-size:cover;background-position:center;border-radius:16px;min-height:420px;box-shadow:0 8px 30px rgba(2,6,23,0.6);display:flex;flex-direction:column;justify-content:flex-end;padding:18px}
+    .hero-right .overlay{backdrop-filter: blur(6px);background:linear-gradient(180deg,transparent,rgba(0,0,0,0.5));padding:12px;border-radius:12px}
+
+    /* Sections */
+    section{padding:48px 0}
+    h2.section-title{font-size:22px;margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature-card img{width:100%;height:140px;object-fit:cover;border-radius:10px;margin-bottom:12px}
+    .feature-card p{color:var(--muted);font-size:14px}
+
+    /* Courses */
+    .course{display:flex;gap:14px;align-items:center;padding:14px;border-radius:12px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))}
+    .course img{width:100px;height:70px;object-fit:cover;border-radius:8px}
+    .course .meta{flex:1}
+    .price{font-weight:800}
+
+    /* Testimonials */
+    .testimonials{display:flex;gap:12px}
+    .testimonial{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));flex:1}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    input,textarea,select{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+
+    footer{padding:28px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .container{padding:18px}
+    }
+    @media (max-width:640px){
+      nav{display:none}
+      header{gap:8px}
+      .grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .hero-right{min-height:240px}
+      .features-row{flex-direction:column}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">PF</div>
+        <div>
+          <div style="font-weight:800">PeakFit Gym</div>
+          <div style="font-size:12px;color:var(--muted)">Strength • Cardio • Community</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#classes">Classes</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#join">Join Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <h1>Train smarter. Get stronger. Join the community.</h1>
+          <p class="sub">Personalised training plans, small group classes, and a welcoming space to reach your goals. Discover how PeakFit helps members transform — one workout at a time.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#join">Start Your Free Trial</a>
+            <a class="btn btn-ghost" href="#classes">View Classes</a>
+          </div>
+
+          <div class="features-row" aria-hidden>
+            <div class="pill">Personal Training</div>
+            <div class="pill">Strength & Conditioning</div>
+            <div class="pill">Nutrition Coaching</div>
+          </div>
+
+          <div style="margin-top:26px" class="card stats">
+            <div class="stat">
+              <div style="font-size:18px;color:var(--accent);font-weight:800">12k+</div>
+              <h3>Members</h3>
+            </div>
+            <div class="stat">
+              <div style="font-size:18px;color:var(--accent-2);font-weight:800">35+</div>
+              <h3>Weekly Classes</h3>
+            </div>
+            <div class="stat">
+              <div style="font-size:18px;color:#ffd166;font-weight:800">25</div>
+              <h3>Trainers</h3>
+            </div>
+          </div>
+
+        </div>
+
+        <aside class="hero-right" role="img" aria-label="Gym people training">
+          <div class="overlay">
+            <div style="display:flex;justify-content:space-between;align-items:center">
+              <div style="font-weight:800">Open 6:00 — 23:00</div>
+              <div style="font-size:13px;color:var(--muted)">Book a slot</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <h2 class="section-title">What we offer</h2>
+        <div class="grid">
+          <div class="feature-card card">
+            <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001d4?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2e6ed6d4f8f60d4c1b1d3c3d7d6a8f2c" alt="Strength training">
+            <h3>Strength Training</h3>
+            <p>Free weights, machines, and coach-led programming for hypertrophy and strength gains.</p>
+          </div>
+
+          <div class="feature-card card">
+            <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8d1b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8e1c9f1b2f2f3b4e5a6c7d8e9f0a1b2c" alt="Group class">
+            <h3>Group Classes</h3>
+            <p>HIIT, Spin, Yoga and Functional movement classes to boost fitness and community.</p>
+          </div>
+
+          <div class="feature-card card">
+            <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7f2f1a2b3c4d5e6f7a8b9c0d1e2f3a4b" alt="Nutrition">
+            <h3>Nutrition Coaching</h3>
+            <p>Custom meal plans and weekly check-ins to support training and recovery.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="classes">
+        <h2 class="section-title">Popular Programs</h2>
+        <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="course card">
+            <img src="https://images.unsplash.com/photo-1517964603305-8f8e9a0a64d2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6f9eaf12345b67890cdef123456789ab" alt="Powerlifting">
+            <div class="meta">
+              <div style="font-weight:800">Power & Strength</div>
+              <div style="color:var(--muted);font-size:13px">4 sessions / week • Program length: 12 weeks</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price">₹6,999</div>
+              <div style="color:var(--muted);font-size:13px">/12 weeks</div>
+            </div>
+          </div>
+
+          <div class="course card">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=abcd1234ef567890abcd1234ef567890" alt="HIIT">
+            <div class="meta">
+              <div style="font-weight:800">HIIT Express</div>
+              <div style="color:var(--muted);font-size:13px">Drop-in friendly • 30-minute metabolic sessions</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price">₹1,199</div>
+              <div style="color:var(--muted);font-size:13px">/month</div>
+            </div>
+          </div>
+
+          <div class="course card">
+            <img src="https://images.unsplash.com/photo-1512070679279-c0e1f9b6c0a6?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=xyz9876543210abcd1234567890efghij" alt="Yoga">
+            <div class="meta">
+              <div style="font-weight:800">Recovery & Mobility</div>
+              <div style="color:var(--muted);font-size:13px">Yoga, mobility classes and guided recovery sessions</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price">₹1,499</div>
+              <div style="color:var(--muted);font-size:13px">/month</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="trainers">
+        <h2 class="section-title">Meet our trainers</h2>
+        <div class="grid">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=a1b2c3d4e5f67890123456789abcdef0" alt="Trainer 1">
+            <h3>Arjun Patel</h3>
+            <p style="color:var(--muted)">Certified Strength & Conditioning Coach. Specialises in powerlifting and hypertrophy.</p>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1545996124-1f8a9a2a1f23?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=bbbbccccddddeeeeffff111122223333" alt="Trainer 2">
+            <h3>Neha Sharma</h3>
+            <p style="color:var(--muted)">Group fitness lead — HIIT, functional training and community coaching.</p>
+          </div>
+
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1547483232-1b0fbf8ad1a4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=11223344556677889900aabbccddeeff" alt="Trainer 3">
+            <h3>Shaan Verma</h3>
+            <p style="color:var(--muted)">Nutrition coach and sports performance specialist.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <h2 class="section-title">What our members say</h2>
+        <div class="testimonials">
+          <div class="testimonial">
+            <strong>Ritika —</strong>
+            <p style="color:var(--muted);margin-top:8px">"I gained 8 kg of muscle and finally hit my deadlift PR. The trainers are fantastic and the classes keep me consistent."</p>
+          </div>
+          <div class="testimonial">
+            <strong>Manish —</strong>
+            <p style="color:var(--muted);margin-top:8px">"Friendly community and flexible timings. Love the nutrition support — helped me lean down without losing strength."</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title">Get in touch</h2>
+        <div class="contact-grid">
+          <div class="card">
+            <form onsubmit="event.preventDefault();alert('Thanks! We will contact you soon.');">
+              <label>Name</label>
+              <input required placeholder="Your name" />
+              <label style="margin-top:10px">Email</label>
+              <input type="email" required placeholder="you@example.com" />
+              <label style="margin-top:10px">Message</label>
+              <textarea rows="4" placeholder="Tell us what you're looking for"></textarea>
+              <div style="margin-top:12px;display:flex;gap:10px">
+                <button class="btn btn-primary" type="submit">Send Message</button>
+                <a class="btn btn-ghost" href="tel:+911234567890">Call: +91 12345 67890</a>
+              </div>
+            </form>
+          </div>
+
+          <div class="card" style="display:flex;flex-direction:column;gap:10px;justify-content:center">
+            <div style="font-weight:800">Visit us</div>
+            <div style="color:var(--muted)">123 Fitness Street, Nizamabad</div>
+            <div style="margin-top:12px">
+              <strong>Opening hours</strong>
+              <div style="color:var(--muted)">Mon — Sun: 6:00 — 23:00</div>
+            </div>
+            <div style="margin-top:12px">
+              <strong>Follow</strong>
+              <div style="color:var(--muted)">Instagram • Facebook • X</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="join">
+        <h2 class="section-title">Ready to start?</h2>
+        <div class="card" style="display:flex;align-items:center;justify-content:space-between">
+          <div>
+            <div style="font-weight:800;font-size:18px">Start your free 7-day trial — no card required</div>
+            <div style="color:var(--muted)">Limited slots each month. Book now to reserve your spot.</div>
+          </div>
+          <div>
+            <a class="btn btn-primary" href="#contact">Book Free Trial</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> PeakFit Gym — All rights reserved</div>
+      <div style="color:var(--muted)">Designed with ❤️</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
